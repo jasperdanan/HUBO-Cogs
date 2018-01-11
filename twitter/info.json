@@ -1,0 +1,9 @@
+{
+    "AUTHOR" : "Seklfreak; xell0s",
+    "SHORT" : "<don't know yet>",
+    "DESCRIPTION" : "Configure this cog to post new instagram pictures to a specified channel.\nRequires an Instagram account (stored locally).",
+    "NAME" : "Twitter",
+    "REQUIREMENTS": ["tweepy"],
+    "TAGS" : ["Twitter", "social media", "kpop"],
+    "INSTALL_MSG" : "`[p]twitter` or `[p]t`"
+}
