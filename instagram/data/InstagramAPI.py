@@ -18,7 +18,7 @@ import aiohttp
 if sys.version_info.major == 3:
     import urllib.parse
 
-from cogs.utils.ImageUtils import getImageSize
+from data.instagram.ImageUtils import getImageSize
 from requests_toolbelt import MultipartEncoder
 #from moviepy.editor import VideoFileClip
 
