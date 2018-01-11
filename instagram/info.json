@@ -1,9 +1,9 @@
 {
     "AUTHOR" : "Seklfreak; xell0s",
-    "SHORT" : "It's Instagram on Discord",
-    "DESCRIPTION" : "<Insert how this cog works once I get it running>",
+    "SHORT" : "Posts new instagram pictures in Discord",
+    "DESCRIPTION" : "Configure this cog to post new instagram pictures to a specified channel.\nRequires an Instagram account (stored locally).",
     "NAME" : "Instagram",
     "REQUIREMENTS": ["requests_toolbelt"],
     "TAGS" : ["instagram", "social media", "kpop"],
-    "INSTALL_MSG" : "Usage: I don't know yet..."
+    "INSTALL_MSG" : "`[p]instagram` or `[p]i`"
 }
