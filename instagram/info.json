@@ -5,5 +5,5 @@
     "NAME" : "Instagram",
     "REQUIREMENTS": ["requests_toolbelt"],
     "TAGS" : ["instagram", "social media", "kpop"],
-    "INSTALL_MSG" : "`[p]instagram` or `[p]i`"
+    "INSTALL_MSG" : "Usage `[p]instagram` or `[p]i`"
 }
