@@ -1,0 +1,9 @@
+{
+    "AUTHOR" : "Seklfreak; xell0s",
+    "SHORT" : "Get VLive notifications and more",
+    "DESCRIPTION" : "Dunno yet",
+    "NAME" : "vlive",
+    "REQUIREMENTS": ["beautifulsoup"],
+    "TAGS" : ["vlive", "social media", "kpop", "streaming"],
+    "INSTALL_MSG" : "Usage `[p]vlive` or `[p]vl`"
+}
