@@ -5,5 +5,5 @@
     "NAME" : "Twitter",
     "REQUIREMENTS": ["tweepy"],
     "TAGS" : ["Twitter", "social media", "kpop"],
-    "INSTALL_MSG" : "`[p]twitter` or `[p]t`"
+    "INSTALL_MSG" : " Usage: `[p]twitter` or `[p]tw`"
 }
