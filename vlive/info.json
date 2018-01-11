@@ -3,7 +3,7 @@
     "SHORT" : "Get VLive notifications and more",
     "DESCRIPTION" : "Dunno yet",
     "NAME" : "vlive",
-    "REQUIREMENTS": ["beautifulsoup"],
+    "REQUIREMENTS": ["beautifulsoup4"],
     "TAGS" : ["vlive", "social media", "kpop", "streaming"],
     "INSTALL_MSG" : "Usage `[p]vlive` or `[p]vl`"
 }
