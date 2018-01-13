@@ -175,6 +175,7 @@ class Vlive:
         return embed_data
 
     async def get_channel_information_from_channel_id(self, channel_id):
+        """Grabs everything about the channel and preps it for the embded"""
         channel_seq = await self.get_channel_seq_from_channel_id(channel_id)
 
         channel_api_url = self.api_base_url.format("channel.{0}".format(channel_seq), self.settings["VLIVE_APP_ID"], "fields=channel_name,fan_count,channel_cover_img,channel_profile_img,representative_color,celeb_board")
@@ -269,6 +270,7 @@ class Vlive:
             return None
 
     async def get_channel_seq_from_channel_id(self, channel_id):
+        """Decodes the Channel Sequence Code from the Channel ID to be used in the API"""
         decode_channel_code_api_url = self.api_base_url.format("vproxy/channelplus/decodeChannelCode", self.settings["VLIVE_APP_ID"], "channelCode={0}".format(channel_id))
 
         try:
@@ -283,6 +285,7 @@ class Vlive:
             return None
 
     async def get_channel_id_from_channel_name(self, channel_search_name):
+        """Grabs the Channel ID if not already given (which can be seen when accessing a profile)"""
         search_url = self.main_base_url.format("search/channels?query={0}".format(channel_search_name))
 
         try:
@@ -387,6 +390,7 @@ class Vlive:
         await self.bot.send_message(channel, "<{0}>".format(channel_information["last_celeb_post"]["url"]), embed=embed_data)
 
     async def check_feed_loop(self, sleep, loop):
+        """Checks VLive periodically with the channels in database"""
         await self.bot.wait_until_ready()
         while self == self.bot.get_cog('Vlive'):
             print("checking vlive channels...")
