@@ -146,7 +146,7 @@ class Instagram:
     async def check_feed_loop(self, sleep, loop):
         await self.bot.wait_until_ready()
         while self == self.bot.get_cog('Instagram'):
-            print("checking instagram feed...")
+            #print("checking instagram feed...") #Too Spammy
             await self.instagramAPI.login()
             for feed in self.feeds:
                 channel = self.bot.get_channel(feed["channelId"])

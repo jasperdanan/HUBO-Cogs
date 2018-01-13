@@ -168,7 +168,7 @@ class Twitter:
     async def check_feed_loop(self, sleep, loop):
         await self.bot.wait_until_ready()
         while self == self.bot.get_cog('Twitter'):
-            print("checking twitter feed...")
+            #print("checking twitter feed...") Too spammy
             self.authenticate()
             for feed in self.feeds:
                 channel = self.bot.get_channel(feed["channelId"])

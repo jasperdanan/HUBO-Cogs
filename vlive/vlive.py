@@ -385,7 +385,7 @@ class Vlive:
         """Checks VLive periodically with the channels in database"""
         await self.bot.wait_until_ready()
         while self == self.bot.get_cog('Vlive'):
-            print("checking vlive channels...")
+            #print("checking vlive channels...") #Too spammy
             for vlive_channel in self.channels:
                 channel = self.bot.get_channel(vlive_channel["channelId"])
                 if channel == None:
