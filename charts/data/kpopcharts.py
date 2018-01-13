@@ -29,7 +29,7 @@ import urllib.parse
 import urllib.request
 
 # our stuff
-from . import youtube
+from data.charts import youtube
 
 # third-party
 import ftfy
