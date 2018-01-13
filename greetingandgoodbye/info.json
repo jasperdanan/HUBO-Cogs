@@ -1,0 +1,8 @@
+{
+    "AUTHOR" : "Seklfreak; xell0s",
+    "SHORT" : "Greets and Says Goodbye Robyul style",
+    "DESCRIPTION" : "Simple cog that responds to Joining and Leaving users, kpop themed.",
+    "NAME" : "greetingandgoodbye",
+    "TAGS" : ["greeting", "goodbye", "kpop"],
+    "INSTALL_MSG" : "[WIP]`"
+}
