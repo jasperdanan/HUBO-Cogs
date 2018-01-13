@@ -1,7 +1,7 @@
 {
     "AUTHOR" : "Seklfreak; xell0s",
     "SHORT" : "Get Notified by a certain Keyword",
-    "DESCRIPTION" : "Get DM from the bot if someone said a configured Keyword",
+    "DESCRIPTION" : "Get DM from the bot if someone said a configured Keyword.\n**Warning:** This cog requires the bot to have message management perms!",
     "NAME" : "notification",
     "TAGS" : ["notification", "utilities", "kpop"],
     "INSTALL_MSG" : "Usage: `[p][notifications|notification|noti]`"
