@@ -190,13 +190,10 @@ class Vlive:
         "last_celeb_post": {"id": "", "summary": "", "url": ""}}
 
         try:
-            conn = aiohttp.TCPConnector()
-            session = aiohttp.ClientSession(connector=conn)
-            async with session.get(channel_api_url, headers=self.headers) as r:
+            async with aiohttp.get(channel_api_url, headers=self.headers) as r:
                 result = await r.json()
 
             if "error" in result:
-                session.close()
                 return None
 
             channel_data["name"] = result["channel_name"]
@@ -208,7 +205,7 @@ class Vlive:
             if "celeb_board" in result and "board_id" in result["celeb_board"]:
                 channel_data["celeb_board_id"] = result["celeb_board"]["board_id"]
 
-            async with session.get(channel_video_list_api_url, headers=self.headers) as r:
+            async with aiohttp.get(channel_video_list_api_url, headers=self.headers) as r:
                 result = await r.json()
 
             channel_data["total_videos"] = result["result"]["totalVideoCount"]
@@ -225,7 +222,7 @@ class Vlive:
                 channel_data["last_video"]["type"] = last_video["videoType"]
                 channel_data["last_video"]["url"] = self.main_base_url.format("video/{0}".format(last_video["videoSeq"]))
 
-            async with session.get(channel_upcoming_video_list_api_url, headers=self.headers) as r:
+            async with aiohttp.get(channel_upcoming_video_list_api_url, headers=self.headers) as r:
                 result = await r.json()
 
             if "videoList" in result["result"] and result["result"]["videoList"] != None and len(result["result"]["videoList"]) > 0:
@@ -239,7 +236,7 @@ class Vlive:
                 channel_data["next_upcoming_video"]["type"] = next_upcoming_video["videoType"]
                 channel_data["next_upcoming_video"]["url"] = self.main_base_url.format("video/{0}".format(next_upcoming_video["videoSeq"]))
 
-            async with session.get(channel_notices_api_url, headers=self.headers) as r:
+            async with aiohttp.get(channel_notices_api_url, headers=self.headers) as r:
                 result = await r.json()
 
             if "data" in result and len(result["data"]) > 0:
@@ -253,7 +250,7 @@ class Vlive:
             if channel_data["celeb_board_id"] != 0:
                 channel_celeb_api_url = self.api_base_url.format("board.{0}/posts".format(channel_data["celeb_board_id"]), self.settings["VLIVE_APP_ID"], "")
 
-                async with session.get(channel_celeb_api_url, headers=self.headers) as r:
+                async with aiohttp.get(channel_celeb_api_url, headers=self.headers) as r:
                     result = await r.json()
 
                 if "data" in result and len(result["data"]) > 0:
@@ -261,8 +258,6 @@ class Vlive:
                     channel_data["last_celeb_post"]["id"] = last_celeb_post["post_id"]
                     channel_data["last_celeb_post"]["summary"] = last_celeb_post["body_summary"]
                     channel_data["last_celeb_post"]["url"] = self.celeb_friendly_url.format(channel_id, last_celeb_post["post_id"])
-
-            session.close()
 
             return channel_data
         except Exception as e:
@@ -274,11 +269,8 @@ class Vlive:
         decode_channel_code_api_url = self.api_base_url.format("vproxy/channelplus/decodeChannelCode", self.settings["VLIVE_APP_ID"], "channelCode={0}".format(channel_id))
 
         try:
-            conn = aiohttp.TCPConnector()
-            session = aiohttp.ClientSession(connector=conn)
-            async with session.get(decode_channel_code_api_url, headers=self.headers) as r:
+            async with aiohttp.get(decode_channel_code_api_url, headers=self.headers) as r:
                 result = await r.json()
-            session.close()
             return result["result"]["channelSeq"]
         except Exception as e:
             self.bot.logger.error(e, exc_info=True)
