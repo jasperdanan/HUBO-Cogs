@@ -4,5 +4,5 @@
     "DESCRIPTION" : "Get DM from the bot if someone said a configured Keyword",
     "NAME" : "notification",
     "TAGS" : ["notification", "utilities", "kpop"],
-    "INSTALL_MSG" : "idk yet"
+    "INSTALL_MSG" : "Usage: `[p][notifications|notification|noti]`"
 }
