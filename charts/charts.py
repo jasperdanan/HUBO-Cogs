@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 from random import choice as randchoice
-from .data.charts.kpopcharts import kpopcharts
+from data.charts.kpopcharts import kpopcharts
 import datetime
 from __main__ import send_cmd_help
 
