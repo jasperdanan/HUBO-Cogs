@@ -4,6 +4,6 @@
     "DESCRIPTION" : "Grabs the charts from iChart, Melon, and Gaon.\nWarning: python-lxml must be installed first before installing this cog!",
     "NAME" : "charts",
     "TAGS" : ["charts", "social media", "utilities", "kpop"],
-    "REQUIREMENTS" : ["ftfy", "googleapiclient"],
+    "REQUIREMENTS" : ["ftfy", "google-api-python-client"],
     "INSTALL_MSG" : "Usage: `[p][ichart|melon|gaon]`"
 }
