@@ -1,9 +1,9 @@
 {
     "AUTHOR" : "Seklfreak; xell0s",
     "SHORT" : "See if your favourite is up in the charts!",
-    "DESCRIPTION" : "Grabs the charts from iChart, Melon, and Gaon",
+    "DESCRIPTION" : "Grabs the charts from iChart, Melon, and Gaon.\nWarning: python-lxml must be installed first before installing this cog!",
     "NAME" : "charts",
     "TAGS" : ["charts", "social media", "utilities", "kpop"],
-    "REQUIREMENTS" : ["ftfy", "libxml2-python", "lxml", "googleapiclient"],
+    "REQUIREMENTS" : ["ftfy", "googleapiclient"],
     "INSTALL_MSG" : "Usage: `[p][ichart|melon|gaon]`"
 }
